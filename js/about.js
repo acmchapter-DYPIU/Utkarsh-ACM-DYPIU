@@ -4,7 +4,7 @@
 
 const particleContainer = document.getElementById("particles");
 
-const particleCount = window.innerWidth <= 768 ? 100 : 345;
+for (let i = 0; i < 345; i++) {
 
 for (let i = 0; i < particleCount; i++) {
 
