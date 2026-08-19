@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
   const toggle = document.getElementById("navToggle");
   const navLinksList = document.getElementById("navLinks");
   const navCta = document.querySelector(".nav-cta");
@@ -144,7 +145,7 @@ gsap.to(".acm-logo", {
 // Ring rotations
 gsap.to(".ring-1", {
     rotation: 360,
-    duration: 40,
+    duration: isMobile ? 60 : 40,
     repeat: -1,
     ease: "none",
     transformOrigin: "50% 50%"
@@ -152,7 +153,7 @@ gsap.to(".ring-1", {
 
 gsap.to(".ring-2", {
     rotation: -360,
-    duration: 30,
+    duration: isMobile ? 45 : 30,
     repeat: -1,
     ease: "none",
     transformOrigin: "50% 50%"
@@ -160,7 +161,7 @@ gsap.to(".ring-2", {
 
 gsap.to(".ring-3", {
     rotation: 360,
-    duration: 22,
+    duration: isMobile ? 35 : 22,
     repeat: -1,
     ease: "none",
     transformOrigin: "50% 50%"
@@ -281,11 +282,15 @@ gsap.utils.toArray(".mesh-node").forEach((node) => {
 
     gsap.to(node, {
 
-        scale: gsap.utils.random(1.2, 1.8),
+        scale: isMobile
+        ? gsap.utils.random(1.1, 1.4)
+        : gsap.utils.random(1.2, 1.8),
 
         opacity: gsap.utils.random(0.4, 1),
 
-        duration: gsap.utils.random(1.5, 3),
+        duration: isMobile
+        ? gsap.utils.random(2.5, 4)
+        : gsap.utils.random(1.5, 3),
 
         repeat: -1,
 
