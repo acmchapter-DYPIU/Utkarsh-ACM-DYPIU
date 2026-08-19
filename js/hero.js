@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
   const toggle = document.getElementById("navToggle");
   const navLinksList = document.getElementById("navLinks");
   const navCta = document.querySelector(".nav-cta");
