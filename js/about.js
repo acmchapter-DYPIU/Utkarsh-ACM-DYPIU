@@ -4,7 +4,9 @@
 
 const particleContainer = document.getElementById("particles");
 
-for (let i = 0; i < 345; i++) {
+const particleCount = window.innerWidth <= 768 ? 100 : 345;
+
+for (let i = 0; i < particleCount; i++) {
 
     const particle = document.createElement("span");
 
