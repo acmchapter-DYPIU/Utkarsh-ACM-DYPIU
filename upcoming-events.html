@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="preload" href="css/events.css" as="style" />
+    <link rel="stylesheet" href="css/events.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/interactions.css" />
+    <link rel="icon" type="image/png" href="images/acm-logo.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upcoming Events — UTKARSH ACM DYPIU</title>
+  </head>
+
+  <body>
+    <header class="navbar-wrap">
+      <nav class="navbar wrap">
+        <a href="index.html#home" class="nav-brand">
+          <div class="brand-mark">
+            <img src="images/acm-logo.png" alt="ACM Logo" />
+          </div>
+          <span class="brand-text">
+            <span class="brand-name">UTKARSH</span>
+            <span class="brand-sub">ACM DYPIU</span>
+          </span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <a href="upcoming-events.html" class="nav-cta">
+          <span>Explore</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+    <main class="page page--top">
+      <div class="wrap">
+        <!-- Heading is now completely outside the box boundary -->
+        <section class="section-heading">
+          <span class="eyebrow"
+            ><span class="dot"></span>events.upcoming()</span
+          >
+          <h1 class="page-title headline scramble-title">
+            Upcoming <span class="accent">Events</span>
+          </h1>
+          <p>
+            Stay tuned for our next coding sprints, technical sessions, and
+            community catch-ups.
+          </p>
+        </section>
+
+        <!-- The outline boundary box container now ONLY encloses the placeholder card layout -->
+        <div class="content-frame" style="margin-top: 0">
+          <section class="event-showcase">
+            <div class="event-showcase-grid">
+              <!-- Left Side — Visual Image Box Container -->
+              <div class="event-visual">
+                <span class="event-badge">Next Up</span>
+              </div>
+
+              <!-- Right Side — Text Information Content Panel -->
+              <div class="event-info">
+                <span class="event-tag">EVT-01 // COMING SOON</span>
+                <h3 class="event-title">Paper2Prototype</h3>
+                <p class="event-description">
+                  A first-of-its-kind research innovation challenge where
+                  participants transform cutting-edge research into real-world
+                  solutions. Analyze published research, build a working
+                  prototype, and pitch a startup idea as you experience the
+                  complete journey from discovery to innovation.
+                </p>
+
+                <!-- Meta Badges Fields Grid -->
+                <div class="event-meta">
+                  <!-- Date Meta Card -->
+                  <div class="event-meta-item" style="display: block">
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-bottom: 4px;
+                      "
+                    >
+                      <svg
+                        class="event-meta-icon"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="var(--orange)"
+                        stroke-width="2"
+                      >
+                        <rect
+                          x="3"
+                          y="4"
+                          width="18"
+                          height="18"
+                          rx="2"
+                          ry="2"
+                        ></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <span class="event-meta-label" style="margin-bottom: 0"
+                        >Date</span
+                      >
+                    </div>
+                    <span class="event-meta-value">TBD</span>
+                  </div>
+
+                  <!-- Time Meta Card -->
+                  <div class="event-meta-item" style="display: block">
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-bottom: 4px;
+                      "
+                    >
+                      <svg
+                        class="event-meta-icon"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="var(--orange)"
+                        stroke-width="2"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      <span class="event-meta-label" style="margin-bottom: 0"
+                        >Time</span
+                      >
+                    </div>
+                    <span class="event-meta-value">TBD</span>
+                  </div>
+
+                  <!-- Venue Meta Card -->
+                  <div class="event-meta-item" style="display: block">
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-bottom: 4px;
+                      "
+                    >
+                      <svg
+                        class="event-meta-icon"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="var(--orange)"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                        ></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                      <span class="event-meta-label" style="margin-bottom: 0"
+                        >Venue</span
+                      >
+                    </div>
+                    <span class="event-meta-value"
+                      >D Y Patil International University, Akurdi, Pune</span
+                    >
+                  </div>
+                  <div class="register-btn-container">
+                    <a
+                      href=" "
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="register-btn"
+                    >
+                      Register Now
+                      <span class="arrow">→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Lower Panel Section with exact 250px clearance -->
+        <section class="cta-section upcoming-spatial-divider">
+          <div class="cta-panel">
+            <span class="cta-eyebrow">Stay Connected</span>
+            <h2 class="cta-heading">Never Miss An ACM Event</h2>
+            <p class="cta-subtext">
+              Follow UTKARSH ACM DYPIU to stay updated with hackathons,
+              workshops, coding competitions, technical talks and exciting
+              community events.
+            </p>
+
+            <div class="cta-buttons">
+              <a
+                href="https://www.instagram.com/acmstudentchapter_dypiu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta-btn secondary-btn"
+              >
+                Instagram
+                <svg
+                  class="cta-icon"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4.2" />
+                  <circle
+                    cx="17.4"
+                    cy="6.6"
+                    r="1"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/acm-student-chapter-dypiu-socsea-utkarsh/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta-btn"
+              >
+                LinkedIn
+                <svg
+                  class="cta-icon"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <path d="M7.5 10.2V16.8" stroke-linecap="round" />
+                  <circle cx="7.5" cy="7.2" r="0.2" fill="currentColor" />
+                  <path
+                    d="M11 16.8V12.9C11 11.4 11.9 10.2 13.3 10.2C14.6 10.2 15.5 11.1 15.5 12.7V16.8"
+                  />
+                  <path d="M11 10.4V16.8" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/all.min.js"></script>
+
+    <script src="js/events.js"></script>
+    <script src="js/transitions.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/tilt.js"></script>
+  </body>
+</html>

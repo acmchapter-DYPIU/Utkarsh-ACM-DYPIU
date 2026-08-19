@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Previous Events — UTKARSH ACM DYPIU</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/interactions.css" />
+    <link rel="preload" href="css/events.css" as="style" />
+    <link rel="stylesheet" href="css/events.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="icon" type="image/png" href="images/acm-logo.png" />
+  </head>
+  <body>
+    <header class="navbar-wrap">
+      <nav class="navbar wrap">
+        <a href="index.html#home" class="nav-brand">
+          <div class="brand-mark">
+            <img src="images/acm-logo.png" alt="ACM Logo" />
+          </div>
+          <span class="brand-text">
+            <span class="brand-name">UTKARSH</span>
+            <span class="brand-sub">ACM DYPIU</span>
+          </span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <a href="upcoming-events.html" class="nav-cta">
+          <span>Explore</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+    <main class="page page--top">
+      <div class="wrap">
+        <!-- Heading is now completely outside the box boundary -->
+        <section class="section-heading">
+          <span class="eyebrow"><span class="dot"></span>events.archive()</span>
+          <h1 class="page-title headline scramble-title">
+            The archive <span class="accent">starts here.</span>
+          </h1>
+          <p>
+            This is where our past events will live — sessions, workshops, and
+            highlights from everything the chapter has run.
+          </p>
+        </section>
+
+        <!-- The outline boundary box container now ONLY encloses the placeholder card layout -->
+        <div class="content-frame" style="margin-top: 0">
+          <section class="event-showcase">
+            <div class="event-showcase-grid">
+              <!-- Left Side — Visual Image Box Container (Clean glow with badge) -->
+              <div class="event-visual">
+                <span class="event-badge">No Events Yet</span>
+              </div>
+
+              <!-- Right Side — Text Information Content Panel -->
+              <div class="event-info">
+                <span class="event-tag">EVT-00 // ARCHIVE</span>
+                <h3 class="event-title">Event:</h3>
+                <p class="event-description">
+                  Every workshop, hackathon, and meetup we run becomes part of
+                  this archive — our first entry is already taking shape.
+                </p>
+
+                <!-- Meta Badges Fields Grid -->
+                <div class="event-meta">
+                  <!-- Date Meta Card -->
+                  <div class="event-meta-item" style="display: block">
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-bottom: 4px;
+                      "
+                    >
+                      <svg
+                        class="event-meta-icon"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="var(--orange)"
+                        stroke-width="2"
+                      >
+                        <rect
+                          x="3"
+                          y="4"
+                          width="18"
+                          height="18"
+                          rx="2"
+                          ry="2"
+                        ></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <span class="event-meta-label" style="margin-bottom: 0"
+                        >Date</span
+                      >
+                    </div>
+                    <span class="event-meta-value">TBD</span>
+                  </div>
+
+                  <!-- Time Meta Card -->
+                  <div class="event-meta-item" style="display: block">
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-bottom: 4px;
+                      "
+                    >
+                      <svg
+                        class="event-meta-icon"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="var(--orange)"
+                        stroke-width="2"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      <span class="event-meta-label" style="margin-bottom: 0"
+                        >Time</span
+                      >
+                    </div>
+                    <span class="event-meta-value">TBD</span>
+                  </div>
+
+                  <!-- Status Meta Card -->
+                  <div class="event-meta-item" style="display: block">
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-bottom: 4px;
+                      "
+                    >
+                      <svg
+                        class="event-meta-icon"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="var(--orange)"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                        ></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                      <span class="event-meta-label" style="margin-bottom: 0"
+                        >Status</span
+                      >
+                    </div>
+                    <span class="event-meta-value">TBD</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Lower Panel Section with your specific clearance divider class -->
+        <section class="cta-section spatial-divider">
+          <div class="cta-panel">
+            <span class="cta-eyebrow">More Events Ahead</span>
+            <h2 class="cta-heading">Every Event Builds A Stronger Community</h2>
+            <p class="cta-subtext">
+              Every mentoring hackathon, design sprint, and collaborative
+              technical talk shapes our collective growth path here at DYPIU.
+            </p>
+
+            <div class="cta-buttons">
+              <a href="upcoming-events.html" class="cta-btn">
+                Upcoming Events
+                <svg
+                  class="cta-icon"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/all.min.js"></script>
+
+    <script src="js/events.js"></script>
+    <script src="js/transitions.js"></script>
+    <script src="js/navbar.js"></script>
+  </body>
+</html>

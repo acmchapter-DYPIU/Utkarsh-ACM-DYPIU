@@ -1,0 +1,528 @@
+/* ======================================================
+   ROOT
+====================================================== */
+
+
+/* ======================================================
+   RESET
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: "Instrument Sans", sans-serif;
+}
+body{
+
+    background:var(--bg);
+    color:var(--white);
+
+    overflow-x:hidden;
+}
+.instrument-serif-regular {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+.instrument-serif-regular-italic {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+
+/* ======================================================
+   GRID BACKGROUND
+====================================================== */
+
+.grid-overlay{
+
+    position:fixed;
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-2;
+
+    background:
+
+    linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
+
+    linear-gradient(90deg,
+    rgba(255,255,255,.06) 1px,
+    transparent 1px);
+
+    background-size:85px 85px;
+
+}
+
+/* ======================================================
+   ORANGE GLOW
+====================================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:700px;
+    height:700px;
+
+    top:-180px;
+    right:-180px;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(255,106,0,.22),
+    transparent 72%);
+
+    filter:blur(70px);
+
+    z-index:-3;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:600px;
+    height:600px;
+
+    bottom:-250px;
+    left:-200px;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(255,106,0,.12),
+    transparent 75%);
+
+    filter:blur(90px);
+
+    z-index:-3;
+
+}
+
+/* ======================================================
+   FLOATING PARTICLES
+====================================================== */
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+#particles span{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:#ff6a00;
+
+    opacity:.18;
+
+    filter:blur(.5px);
+
+    animation:floatParticle linear infinite;
+
+}
+
+@keyframes floatParticle{
+
+    from{
+
+        transform:
+        translateY(100vh)
+        translateX(0);
+
+    }
+
+    to{
+
+        transform:
+        translateY(-120vh)
+        translateX(80px);
+
+    }
+
+}
+
+/* ======================================================
+   SECTION
+====================================================== */
+
+.about{
+
+    width:100%;
+
+    min-height:100vh;
+
+    padding:90px 0 120px;
+
+}
+
+.container{
+
+    width:min(1380px,92%);
+
+    margin:auto;
+
+}
+
+/* ======================================================
+   LABEL
+====================================================== */
+
+.section-tag{
+
+    color:var(--orange);
+
+    font-size:.95rem;
+
+    letter-spacing:8px;
+
+    margin-bottom:35px;
+
+}
+
+/* ======================================================
+   TOP
+====================================================== */
+
+.about-top{
+
+    display:grid;
+
+    grid-template-columns:1.05fr .95fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+/* ======================================================
+   TITLE
+====================================================== */
+
+.about-left h1{
+
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+
+    font-size:clamp(3.8rem,8vw,7.4rem);
+    line-height:.93;
+    letter-spacing:-5px;
+}
+
+.about-left span{
+
+    color:var(--orange);
+
+}
+
+/* ======================================================
+   NODE AREA
+====================================================== */
+
+.network-wrapper{
+
+    height:520px;
+
+    width:100%;
+
+    position:relative;
+
+    overflow:visible;
+
+    background:transparent;
+
+}
+
+#networkCanvas{
+
+    width:100%;
+    height:100%;
+    display:block;
+
+}
+
+/* ======================================================
+   TEXT
+====================================================== */
+
+.about-bottom{
+
+    margin-top:90px;
+
+}
+
+.about-text{
+
+    max-width:720px;
+
+}
+
+.about-text p{
+
+    font-family: "Press Start 2P", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size:1rem;
+
+    line-height:1.9;
+
+    color:#cfcfcf;
+
+    margin-bottom:35px;
+
+}
+
+.about-text strong{
+
+    color:#fff;
+
+}
+
+/* ======================================================
+   FEATURES
+====================================================== */
+
+.feature-grid{
+
+    margin-top:90px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+}
+
+.feature-card{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:120px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    border-radius:30px;
+    font-family: "Press Start 2P", cursive;
+
+    background:#141414;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:
+
+        border-color .35s,
+
+        box-shadow .35s;
+
+}
+/*=========================================
+        ORANGE ORB
+=========================================*/
+
+.feature-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    top:-90px;
+
+    right:-80px;
+
+    background:
+
+    radial-gradient(circle,
+
+        rgba(255,106,0,.18),
+
+        rgba(255,106,0,.06),
+
+        transparent 72%
+
+    );
+
+    filter:blur(45px);
+
+    opacity:.6;
+
+    transition:
+
+        opacity .4s,
+
+        filter .4s;
+
+}
+
+.feature-card span{
+
+    position:relative;
+
+    z-index:10;
+
+    font-size:1.2rem;
+    font-family: "Press Start 2P", cursive;
+
+    font-weight:700;
+
+    will-change:transform;
+
+}
+
+.feature-card:hover{
+
+    border-color:rgba(255,106,0,.35);
+
+    box-shadow:
+
+        0 0 35px rgba(255,106,0,.10),
+
+        inset 0 0 0 1px rgba(255,106,0,.08);
+
+}
+
+.feature-card:hover::after{
+
+    opacity:1;
+
+    filter:blur(30px);
+
+}
+
+
+/*mouse glow*/
+.mouse-glow{
+
+    position:fixed;
+
+    width:450px;
+    height:450px;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    background:
+        radial-gradient(circle,
+        rgba(255,106,0,.18),
+        rgba(255,106,0,.08) 35%,
+        transparent 75%);
+
+    filter:blur(45px);
+
+    z-index:-2;
+
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media(max-width:980px){
+
+.about-top{
+
+grid-template-columns:1fr;
+
+}
+
+.network-wrapper{
+
+height:420px;
+
+}
+
+.about-left h1{
+
+letter-spacing:-3px;
+
+}
+
+.feature-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.about-text p{
+
+font-size:1.15rem;
+
+}
+
+}
+
+.reveal-text{
+
+    perspective:900px;
+
+}
+
+.reveal-text .line{
+
+    overflow:hidden;
+
+}
+.hero-title{
+
+    perspective:1200px;
+
+}
+
+.hero-title .line{
+
+    display:block;
+
+    overflow:hidden;
+
+    transform-style:preserve-3d;
+
+}

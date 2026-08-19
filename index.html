@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/interactions.css">
+<link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/events.css">
+<link rel="stylesheet" href="css/team.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Bitcount+Prop+Double:wght@100..900&family=Bitcount+Prop+Single:wght@100..900&family=Instrument+Serif:ital@0;1&family=Press+Start+2P&family=Silkscreen&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UTKARSH — ACM Student Chapter, DYPIU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="images/acm-logo.png">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Instrument+Serif:ital@0;1&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="loader">
+
+    <div class="loader-bg"></div>
+
+    <div class="loader-scene">
+        <svg class="loader-mesh" viewBox="0 0 600 600">
+
+    <g class="loader-mesh-lines">
+
+        <!-- Outer Ring -->
+        <circle class="loader-mesh-circle" cx="300" cy="300" r="185"/>
+        <circle class="loader-mesh-circle" cx="300" cy="300" r="145"/>
+
+        <!-- Radial Lines -->
+        <line class="loader-mesh-line" x1="300" y1="115" x2="300" y2="155"/>
+        <line class="loader-mesh-line" x1="430" y1="170" x2="402" y2="198"/>
+        <line class="loader-mesh-line" x1="485" y1="300" x2="445" y2="300"/>
+        <line class="loader-mesh-line" x1="430" y1="430" x2="402" y2="402"/>
+        <line class="loader-mesh-line" x1="300" y1="485" x2="300" y2="445"/>
+        <line class="loader-mesh-line" x1="170" y1="430" x2="198" y2="402"/>
+        <line class="loader-mesh-line" x1="115" y1="300" x2="155" y2="300"/>
+        <line class="loader-mesh-line" x1="170" y1="170" x2="198" y2="198"/>
+
+    </g>
+
+    <g class="loader-mesh-nodes">
+
+        <circle class="loader-node" cx="300" cy="115" r="5"/>
+        <circle class="loader-node" cx="430" cy="170" r="5"/>
+        <circle class="loader-node" cx="485" cy="300" r="5"/>
+        <circle class="loader-node" cx="430" cy="430" r="5"/>
+        <circle class="loader-node" cx="300" cy="485" r="5"/>
+        <circle class="loader-node" cx="170" cy="430" r="5"/>
+        <circle class="loader-node" cx="115" cy="300" r="5"/>
+        <circle class="loader-node" cx="170" cy="170" r="5"/>
+
+    </g>
+
+</svg>
+        <div class="loader-logo-wrap">
+            <img src="images/acm-logo.png" class="loader-logo">
+        </div>
+        <div class="loader-percent" id="loaderPercent">0%</div>
+
+
+    </div>
+
+
+</div>
+        <svg class="loader-mesh">
+            ...
+        </svg>
+
+    </div>
+
+
+<div class="bg-field" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-stars"></div>
+  <span class="bg-square sq-1"></span>
+  <span class="bg-square sq-2"></span>
+</div>
+
+<header class="navbar-wrap">
+  <nav class="navbar wrap">
+    <a href="#home" class="nav-brand">
+
+    <div class="brand-mark">
+
+        <img src="images/acm-logo.png" alt="ACM Logo">
+
+    </div>
+
+    <span class="brand-text">
+        <span class="brand-name">UTKARSH</span>
+        <span class="brand-sub">ACM DYPIU (SoCSEA)</span>
+        <!-- <span class="brand-school">School of Computer Science Engineering &amp; Applications (SoCSEA)</span> -->
+    </span>
+
+</a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <a href="upcoming-events.html" class="nav-cta">
+    <span>Explore</span>
+    <svg><!-- icon --></svg>
+</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    
+    <div class="hero-inner wrap">
+
+      <div class="hero-content">
+                
+
+<h1 class="hero-heading">
+    <span class="hero-line animate-word">Empowering</span><br>
+
+    <span class="hero-line text-gradient">Tomorrow's</span><br>
+
+    <span class="hero-line animate-word">Innovators.</span>
+</h1>
+
+        <p class="hero-subtitle">
+          Building a future driven by technology, innovation, collaboration and leadership through world-class technical experiences.
+        </p>
+
+        <p class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Official ACM Student Chapter
+        </p>
+        <div class="mag-zone hero-mag">
+
+    <a class="hero-cta mag-btn" href="#about">
+
+        <span class="label">
+            Explore More
+            <svg viewBox="0 0 24 24" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"/>
+                <path d="M13 6L19 12L13 18"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+        </span>
+
+    </a>
+
+</div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+        <div class="orbit-ring ring-3"></div>
+        <span class="orbit-dot dot-a"></span>
+        <span class="orbit-dot dot-b"></span>
+        <!-- =========================
+Hero Network Nodes
+========================= -->
+
+<div class="hero-mesh">
+
+<svg class="mesh-svg"
+     viewBox="0 0 800 800"
+     xmlns="http://www.w3.org/2000/svg">
+
+<!-- ===========================
+OUTER MESH RING
+=========================== -->
+
+<g class="mesh-ring outer-ring">
+
+<circle class="mesh-line" cx="400" cy="400" r="285"/>
+
+<!-- Outer Nodes -->
+
+<!-- ===========================
+OUTER MESH RING
+=========================== -->
+
+<g class="mesh-ring outer-ring">
+
+<!-- Nodes -->
+
+<circle class="mesh-node" cx="400" cy="115" r="5"/>
+
+<circle class="mesh-node" cx="510" cy="138" r="4"/>
+
+<rect class="mesh-square" x="595" y="185" width="8" height="8"/>
+
+<circle class="mesh-node" cx="662" cy="280" r="5"/>
+
+<circle class="mesh-node" cx="685" cy="400" r="4"/>
+
+<rect class="mesh-square" x="655" y="520" width="8" height="8"/>
+
+<circle class="mesh-node" cx="600" cy="615" r="5"/>
+
+<circle class="mesh-node" cx="510" cy="663" r="4"/>
+
+<circle class="mesh-node" cx="400" cy="685" r="5"/>
+
+<rect class="mesh-square" x="285" y="655" width="8" height="8"/>
+
+<circle class="mesh-node" cx="200" cy="615" r="5"/>
+
+<circle class="mesh-node" cx="138" cy="520" r="4"/>
+
+<rect class="mesh-square" x="110" y="396" width="8" height="8"/>
+
+<circle class="mesh-node" cx="138" cy="280" r="5"/>
+
+<circle class="mesh-node" cx="205" cy="185" r="4"/>
+
+<rect class="mesh-square" x="286" y="136" width="8" height="8"/>
+
+<!-- Ring Connections -->
+
+<line class="mesh-connection" x1="400" y1="115" x2="510" y2="138"/>
+
+<line class="mesh-connection" x1="510" y1="138" x2="600" y2="189"/>
+
+<line class="mesh-connection" x1="600" y1="189" x2="662" y2="280"/>
+
+<line class="mesh-connection" x1="662" y1="280" x2="685" y2="400"/>
+
+<line class="mesh-connection" x1="685" y1="400" x2="659" y2="524"/>
+
+<line class="mesh-connection" x1="659" y1="524" x2="600" y2="615"/>
+
+<line class="mesh-connection" x1="600" y1="615" x2="510" y2="663"/>
+
+<line class="mesh-connection" x1="510" y1="663" x2="400" y2="685"/>
+
+<line class="mesh-connection" x1="400" y1="685" x2="289" y2="659"/>
+
+<line class="mesh-connection" x1="289" y1="659" x2="200" y2="615"/>
+
+<line class="mesh-connection" x1="200" y1="615" x2="142" y2="524"/>
+
+<line class="mesh-connection" x1="142" y1="524" x2="114" y2="400"/>
+
+<line class="mesh-connection" x1="114" y1="400" x2="138" y2="280"/>
+
+<line class="mesh-connection" x1="138" y1="280" x2="205" y2="185"/>
+
+<line class="mesh-connection" x1="205" y1="185" x2="290" y2="140"/>
+
+<line class="mesh-connection" x1="290" y1="140" x2="400" y2="115"/>
+
+<!-- Outer -> Inner Mesh -->
+
+<line class="mesh-connection" x1="400" y1="115" x2="400" y2="165"/>
+
+<line class="mesh-connection" x1="510" y1="138" x2="495" y2="186"/>
+
+<line class="mesh-connection" x1="600" y1="189" x2="570" y2="250"/>
+
+<line class="mesh-connection" x1="662" y1="280" x2="615" y2="338"/>
+
+<line class="mesh-connection" x1="685" y1="400" x2="635" y2="400"/>
+
+<line class="mesh-connection" x1="659" y1="524" x2="610" y2="494"/>
+
+<line class="mesh-connection" x1="600" y1="615" x2="565" y2="560"/>
+
+<line class="mesh-connection" x1="510" y1="663" x2="495" y2="615"/>
+
+<line class="mesh-connection" x1="400" y1="685" x2="400" y2="635"/>
+
+<line class="mesh-connection" x1="289" y1="659" x2="305" y2="615"/>
+
+<line class="mesh-connection" x1="200" y1="615" x2="230" y2="560"/>
+
+<line class="mesh-connection" x1="142" y1="524" x2="185" y2="494"/>
+
+<line class="mesh-connection" x1="114" y1="400" x2="165" y2="400"/>
+
+<line class="mesh-connection" x1="138" y1="280" x2="185" y2="305"/>
+
+<line class="mesh-connection" x1="205" y1="185" x2="230" y2="240"/>
+
+<line class="mesh-connection" x1="290" y1="140" x2="305" y2="185"/>
+
+
+</g>
+<!-- ===========================
+INNER MESH RING
+=========================== -->
+
+<g class="mesh-ring inner-ring">
+
+<circle class="mesh-line" cx="400" cy="400" r="235"/>
+
+<circle class="mesh-node" cx="400" cy="165" r="4"/>
+
+<circle class="mesh-node" cx="495" cy="186" r="3.5"/>
+
+<circle class="mesh-node" cx="570" cy="250" r="4"/>
+
+<rect class="mesh-square" x="612" y="335" width="7" height="7"/>
+
+<circle class="mesh-node" cx="635" cy="400" r="4"/>
+
+<circle class="mesh-node" cx="610" cy="490" r="3.5"/>
+
+<circle class="mesh-node" cx="565" cy="560" r="4"/>
+
+<rect class="mesh-square" x="492" y="610" width="7" height="7"/>
+
+<circle class="mesh-node" cx="400" cy="635" r="4"/>
+
+<circle class="mesh-node" cx="305" cy="610" r="3.5"/>
+
+<circle class="mesh-node" cx="230" cy="560" r="4"/>
+
+<rect class="mesh-square" x="180" y="490" width="7" height="7"/>
+
+<circle class="mesh-node" cx="165" cy="400" r="4"/>
+
+<circle class="mesh-node" cx="185" cy="305" r="3.5"/>
+
+<circle class="mesh-node" cx="230" cy="240" r="4"/>
+
+<rect class="mesh-square" x="300" y="180" width="7" height="7"/>
+
+</g>
+
+</svg>
+
+</div>
+         <div class="acm-logo-wrap">
+
+    <div class="logo-glow"></div>
+
+    <img
+        src="images/acm-logo.png"
+        alt="ACM DYPIU"
+        class="acm-logo"
+    >
+
+</div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+<script src="js/transitions.js"></script>
+</body>
+
+
+
+<!-- Mouse Glow -->
+<div class="mouse-glow"></div>
+
+<!-- Floating Particles -->
+<div id="particles"></div>
+    <!-- Grid -->
+
+    <div class="grid-overlay"></div>
+<!-- ABOUT -->
+<div class="horizontal-transition">
+
+    <section class="about panel" id="about">
+
+        <div class="container">
+
+            <div class="section-tag">
+                ABOUT
+            </div>
+
+            <div class="about-top">
+
+                <div class="about-left">
+
+                    <h1 class="hero-title">
+    Creating the next
+    <br>
+    generation of
+    <br>
+
+    <span>innovators</span>,
+    developers
+    <br>
+
+    and leaders.
+</h1>
+
+                    
+
+                </div>
+
+                <div class="about-right">
+
+                    <!-- Floating Network -->
+
+                    <div class="network-wrapper">
+
+                        <canvas id="networkCanvas"></canvas>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-bottom">
+
+                <div class="about-text">
+
+    <p class="reveal-text">
+
+        <strong>UTKARSH – ACM DYPIU Student Chapter</strong>
+        is a community where passionate students come together to
+        learn, build, innovate and inspire.
+
+    </p>
+
+    <p class="reveal-text">
+
+        Through workshops, hackathons, coding competitions,
+        networking events and collaborative projects, we create an
+        ecosystem where students grow into confident technology
+        leaders while solving real-world problems.
+
+    </p>
+
+</div>
+
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    Innovation
+                </div>
+
+                <div class="feature-card">
+                    Collaboration
+                </div>
+
+                <div class="feature-card">
+                    Research
+                </div>
+
+                <div class="feature-card">
+                    Leadership
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+<!-- ======================================================
+EVENTS
+====================================================== -->
+
+    <section class="events">
+    <section class="events panel" id="events">
+
+    <div class="wrap">
+
+        <!-- Section Heading -->
+
+        <section class="section-heading">
+
+            <span class="eyebrow">
+                <span class="dot"></span>
+                events.explore()
+            </span>
+
+            <h2 class="events-title headline split-reveal">
+    Where the chapter <span class="accent">shows up.</span>
+</h2>
+            <p>
+                Everything we've run, and everything on the way.
+                Pick a direction to explore.
+            </p>
+
+        </section>
+
+        <!-- Events Cards -->
+
+        <div class="options-grid">
+
+            <!-- Previous Events -->
+
+            <div class="option-card">
+
+                <h2>Previous Events</h2>
+
+                <p>
+                    A look back at what the chapter has hosted so far —
+                    sessions, workshops, and moments that shaped the community.
+                </p>
+
+                <div class="mag-zone">
+
+                    <a href="previous-events.html" class="btn mag-btn">
+
+                        <span class="label">
+
+                            Explore Previous Events
+
+                            <span class="arrow">→</span>
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Upcoming Events -->
+
+            <div class="option-card">
+
+                <h2>Upcoming Events</h2>
+
+                <p>
+                    What's next on the calendar —
+                    sessions, workshops, and meetups the chapter is planning ahead.
+                </p>
+
+                <div class="mag-zone">
+
+                    <a href="upcoming-events.html" class="btn mag-btn">
+
+                        <span class="label">
+
+                            Explore Upcoming Events
+
+                            <span class="arrow">→</span>
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </section>
+<div>
+<!-- ======================================================
+TEAM
+====================================================== -->
+
+
+<section class="team" id="team">
+
+    <div class="wrap">
+
+        <p class="section-eyebrow">/core-team</p>
+
+        <h2 class="section-title scramble-title">Meet the core</h2>
+
+        <div class="team-wrapper">
+
+            <div class="team-grid" id="teamGrid">
+
+                <!-- Cards injected by team.js -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+FACULTY
+====================================================== -->
+
+<section class="faculty" id="faculty">
+
+    <div class="wrap">
+
+        <p class="section-eyebrow">/faculty</p>
+
+        <h2 class="section-title scramble-title">Guided by</h2>
+
+        <div class="faculty-grid" id="facultyGrid">
+
+            <!-- Cards injected by team.js -->
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+CONTACT
+====================================================== -->
+
+<section class="contact" id="contact">
+
+    <div class="wrap">
+
+        <p class="section-eyebrow">/reach-us</p>
+
+        <h2 class="section-title scramble-title">Say hello</h2>
+
+        <p class="contact-sub">
+
+            Follow along for events, workshops, and everything the chapter is building —
+            or drop us a message directly.
+
+        </p>
+
+        <div class="contact-buttons">
+
+            <a class="contact-btn"
+               href="https://www.instagram.com/acmstudentchapter_dypiu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+               target="_blank">
+
+                <span class="contact-btn-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none">
+
+                        <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/>
+
+                        <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/>
+
+                        <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/>
+
+                    </svg>
+
+                </span>
+
+                <span class="contact-btn-text">
+
+                    <span class="contact-btn-label">Instagram</span>
+
+                    <span class="contact-btn-handle">@acmstudentchapter_dypiu</span>
+
+                </span>
+
+            </a>
+
+            <a class="contact-btn"
+               href="https://www.linkedin.com/company/acm-student-chapter-dypiu-socsea-utkarsh/"
+               target="_blank">
+
+                <span class="contact-btn-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none">
+
+                        <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/>
+
+                        <path d="M7.5 10.2V16.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+
+                        <circle cx="7.5" cy="7.2" r="0.2" fill="currentColor" stroke="currentColor" stroke-width="1.4"/>
+
+                        <path d="M11 16.8V12.9C11 11.4 11.9 10.2 13.3 10.2C14.6 10.2 15.5 11.1 15.5 12.7V16.8" stroke="currentColor" stroke-width="1.6"/>
+
+                        <path d="M11 10.4V16.8" stroke="currentColor" stroke-width="1.6"/>
+
+                    </svg>
+
+                </span>
+
+                <span class="contact-btn-text">
+
+                    <span class="contact-btn-label">LinkedIn</span>
+
+                    <span class="contact-btn-handle">ACM Student Chapter · DYPIU</span>
+
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+    <div class="wrap footer-content">
+
+        <div class="footer-left">
+
+            <img src="images/acm-logo.png"
+                 alt="UTKARSH ACM Logo"
+                 class="footer-logo">
+
+            <div class="footer-text">
+
+                <h2>UTKARSH</h2>
+
+                <p>ACM DYPIU Student Chapter</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            © 2026 UTKARSH – ACM DYPIU Student Chapter. All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/hero-interactive.js"></script>
+<script src="js/about.js"></script>
+<script src="js/events.js"></script>
+<script src="js/team.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/tilt.js"></script>
+</html>

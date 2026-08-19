@@ -1,0 +1,647 @@
+/* =========================================================
+   ACM DYPIU — Master Events Stylesheet
+   ========================================================= */
+
+
+
+:root{
+  --black: #0A0A0A;
+  --dark-grey: #1A1A1A;
+  --grey: #808080;
+  --white: #FFFFFF;
+  --orange: #FF6B00;
+  --dark-orange: #C94F00;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  position: relative;
+
+  /* Smooth subtle layout backdrop grid lines */
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center top;
+}
+
+/* -----------------------------------------
+   Main Page Frame Layout Containers
+----------------------------------------- */
+.page{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.page--top{
+  justify-content: flex-start;
+  padding-top: 110px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrap{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* -----------------------------------------
+   Section Labels & Main Heading Typo Components
+----------------------------------------- */
+.eyebrow{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--orange);
+  margin-bottom: 22px;
+}
+
+.eyebrow .dot{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 8px rgba(255,107,0,0.75);
+  flex-shrink: 0;
+}
+
+.section-heading{
+  padding: 0 0 56px;
+}
+
+.section-heading h1{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1.15;
+  color: var(--white);
+  max-width: 720px;
+}
+
+.section-heading h1 .accent{
+  color: var(--orange);
+}
+
+.section-heading p{
+  margin-top: 20px;
+  max-width: 560px;
+  color: var(--grey);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* -----------------------------------------
+   Homepage Option Cards Sizing Layout
+----------------------------------------- */
+.options-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.option-card{
+
+    position:relative;
+    overflow:hidden;
+
+    background:rgba(26,26,26,.9);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:60px 44px;
+
+    min-height:320px;
+
+    display:flex;
+    flex-direction:column;
+
+    transition:.55s;
+
+    isolation:isolate;
+}
+
+.option-card:hover{
+
+    transform:
+    translateY(-14px)
+    rotateX(3deg)
+    rotateY(-3deg);
+
+    border-color:rgba(255,107,0,.45);
+
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 0 70px rgba(255,107,0,.12);
+}
+
+.option-card h2{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.option-card p{
+  color: var(--grey);
+  font-size: 15px;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+.option-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(255,107,0,.18),
+    transparent 70%);
+
+    top:-120px;
+    right:-120px;
+
+    transition:.6s;
+
+    z-index:-1;
+}
+.option-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.04;
+
+    background-image:url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+
+    pointer-events:none;
+}
+.option-card{
+
+    background-image:
+
+    linear-gradient(var(--orange),var(--orange)),
+    linear-gradient(var(--orange),var(--orange)),
+    linear-gradient(var(--orange),var(--orange)),
+    linear-gradient(var(--orange),var(--orange));
+
+    background-repeat:no-repeat;
+
+    background-size:
+
+    0 2px,
+    2px 0,
+    0 2px,
+    2px 0;
+
+    background-position:
+
+    top left,
+    top left,
+    bottom right,
+    bottom right;
+
+    transition:.5s;
+}
+/* Homepage Action Buttons */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  margin-top: 28px;
+  padding: 13px 24px;
+  background: var(--dark-orange);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover{
+  background: var(--orange);
+  transform: translateX(2px);
+}
+
+.btn .arrow{
+  transition: transform 0.2s ease;
+}
+
+.btn:hover .arrow{
+  transform: translateX(3px);
+}
+/* ===========================
+   Magnetic Buttons
+=========================== */
+
+.mag-zone{
+    display:inline-flex;
+    justify-content:flex-start;
+    align-items:center;
+
+    width:320px;
+    height:120px;
+
+    position:relative;
+}
+
+.mag-btn{
+    position:relative;
+    will-change:transform;
+}
+
+.mag-btn .label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    will-change:transform;
+}
+/* -----------------------------------------
+   Sub-page Layout Frame Outline Wrapper
+----------------------------------------- */
+.content-frame{
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 32px;
+  padding: 64px;
+  margin-bottom: 120px; /* Generous separation gap clearance from CTA panels below */
+}
+
+/* -----------------------------------------
+   Inner Events Detailed List Layout Grid
+----------------------------------------- */
+.event-showcase-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 84px;
+  align-items: center;
+}
+
+/* Left side blank orange glow feature wrapper instead of messy code arts */
+.event-visual{
+  position: relative;
+  min-height: 480px;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: #0B0B0C;
+  border: 1px solid rgba(255,255,255,0.07);
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(255,107,0,0.18) 0%, transparent 65%),
+    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 28px 28px, 28px 28px;
+  background-position: center center;
+}
+
+.event-badge{
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--dark-orange), var(--orange));
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Right side content layout details info fields */
+.event-tag{
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 22px;
+  display: block;
+}
+
+.event-title{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 26px;
+}
+
+.event-description{
+  color: var(--grey);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.event-meta{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 44px;
+}
+
+.event-meta-item{
+  background: var(--dark-grey);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 24px 26px;
+}
+
+.event-meta-label{
+  display: block;
+  font-size: 13px;
+  color: var(--grey);
+  margin-bottom: 6px;
+}
+
+.event-meta-value{
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+/* -----------------------------------------
+   SCALED UP Full-width Bottom Panel Layout Components
+----------------------------------------- */
+.cta-section{
+  width: 100%;
+}
+
+.cta-panel{
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,107,0,0.08), rgba(26,26,26,0.4));
+  border: 1px solid rgba(255,107,0,0.18);
+  border-radius: 40px;               
+  padding: 120px 80px;               
+  text-align: center;
+  overflow: hidden;
+  max-width: 1280px;                 
+  margin: 0 auto;
+}
+
+.cta-panel::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(255,107,0,0.16), transparent 60%);
+  pointer-events: none;
+}
+
+.cta-eyebrow{
+  position: relative;
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 15px;                  
+  font-weight: 500;
+  letter-spacing: 0.15em;            
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 28px;               
+}
+
+.cta-heading{
+  position: relative;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 68px;                  
+  line-height: 1.1;
+  color: var(--white);
+  max-width: 950px;                 
+  margin: 0 auto;
+}
+
+.cta-subtext{
+  position: relative;
+  margin: 28px auto 0;               
+  max-width: 780px;                 
+  color: var(--grey);
+  font-size: 20px;                  
+  line-height: 1.6;
+}
+
+.cta-buttons{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 24px;                        
+  margin-top: 56px;                  
+  flex-wrap: wrap;
+}
+
+.cta-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 48px;               
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--dark-orange), var(--orange));
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 18px;                  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.cta-btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(255,107,0,0.4);
+}
+
+.secondary-btn{
+  background: transparent;
+  border: 1px solid rgba(255,107,0,0.3);
+}
+
+.secondary-btn:hover{
+  background: rgba(255,107,0,0.08);
+  box-shadow: none;
+}
+
+.cta-icon{
+  flex-shrink: 0;
+}
+
+/* -----------------------------------------
+   Global Page Layout Mobile Adjustments
+----------------------------------------- */
+@media (max-width: 992px){
+  .wrap { padding: 0 24px; }
+  .content-frame { padding: 40px 24px; border-radius: 24px; margin-bottom: 80px; }
+  .event-showcase-grid { grid-template-columns: 1fr; gap: 40px; }
+  .event-visual { min-height: 360px; }
+  .event-title { font-size: 36px; }
+  
+  .cta-panel{ padding: 80px 44px; border-radius: 30px; }
+  .cta-heading{ font-size: 48px; }
+  .cta-subtext { font-size: 18px; }
+}
+
+@media (max-width: 768px){
+  .options-grid { grid-template-columns: 1fr; gap: 24px; }
+  .event-meta { grid-template-columns: 1fr; gap: 12px; }
+}
+
+@media (max-width: 580px){
+  .section-heading h1 { font-size: 36px; }
+  .cta-panel{ padding: 50px 24px; border-radius: 24px; }
+  .cta-heading{ font-size: 34px; }
+  .cta-subtext { font-size: 15px; }
+  .cta-buttons{ flex-direction: column; align-items: stretch; gap: 16px; }
+  .cta-btn{ justify-content: center; padding: 16px 32px; }
+}
+
+.spatial-divider {
+  margin-top: 250px !important;
+}
+
+.upcoming-spatial-divider {
+  margin-top: 250px !important;
+}
+
+.page {
+  padding-bottom: 160px !important;
+}
+.events-title{
+    font-family: "Silkscreen", sans-serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 700;
+    line-height: .95;
+    color: var(--white);
+}
+
+.events-title .accent{
+    color: var(--orange);
+}
+
+.headline{
+    opacity:1;
+    font-kerning:none;
+    will-change:transform;
+    -webkit-text-rendering:optimizeSpeed;
+    text-rendering:optimizeSpeed;
+    transform:translateZ(0);
+}
+
+.headline *{
+    will-change:transform;
+}
+
+.page-title{
+
+    font-family: "Silkscreen", monospace !important;
+
+    font-size:clamp(3rem,7vw,5rem);
+
+    line-height:1.1;
+
+    letter-spacing:2px;
+
+    color:var(--white);
+
+    margin-bottom:30px;
+}
+
+.page-title .accent{
+
+    color:var(--orange);
+}
+
+/* =====================================================
+ABOUT → EVENTS TRANSITION WRAPPER
+===================================================== */
+
+.horizontal-transition{
+    position: relative;
+}
+
+.panel{
+    position: relative;
+}
+
+
+/*registration link*/
+.register-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+    padding: 15px 38px;
+
+    background: linear-gradient(135deg, #ff7a00, #ff9500);
+    color: #fff;
+
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(255, 122, 0, 0.35);
+}
+
+.register-btn:hover{
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #ff9500, #ff7a00);
+    box-shadow: 0 12px 35px rgba(255, 122, 0, 0.5);
+}
+
+.register-btn:active{
+    transform: scale(0.97);
+}
