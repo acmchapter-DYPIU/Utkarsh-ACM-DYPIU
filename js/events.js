@@ -162,8 +162,6 @@ document.querySelectorAll(".event-visual").forEach((visual) => {
 
     let scanState = 0;
     const scanTextEl = scanLabel.querySelector(".scan-text");
-
-
     setInterval(() => {
         scanState = (scanState + 1) % states.length;
         scanTextEl.textContent = states[scanState];
