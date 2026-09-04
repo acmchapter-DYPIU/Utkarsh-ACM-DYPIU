@@ -406,6 +406,11 @@ a {
   align-items: start;
 }
 
+
+/* =========================================
+   CARDS
+========================================= */
+
 .event-info-card {
   position: relative;
 
@@ -452,7 +457,16 @@ a {
       rgba(255,107,0,0.13),
       transparent 68%
     );
+@media (max-width: 700px) {
+  .event-info-grid {
+    grid-template-columns: 1fr;
+  }
 
+  .judging-card {
+    position: relative;
+    top: auto;
+  }
+}
   filter: blur(20px);
 
   pointer-events: none;
@@ -466,6 +480,7 @@ a {
   box-shadow:
     0 25px 70px rgba(0,0,0,0.38);
 }
+
 
 
 /* =========================================
